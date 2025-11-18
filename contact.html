@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - International Association for Neuro Acupuncture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="IANA-Logo-T-M.png" alt="IANA Logo">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">What is the IANA</a></li>
+                <li><a href="directory.html">Find a Practitioner</a></li>
+                <li><a href="membership.html">Become a Member</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Whether you have questions about membership, need information about neuro-acupuncture, or want to connect with our organization, please reach out to us.</p>
+        </section>
+
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p><strong>Email:</strong> info@iana-neuroacupuncture.org</p>
+            <p><strong>Membership Inquiries:</strong> membership@iana-neuroacupuncture.org</p>
+            <p><strong>General Questions:</strong> contact@iana-neuroacupuncture.org</p>
+        </div>
+
+        <section class="content-section">
+            <h3>Send Us a Message</h3>
+            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Inquiry Type</label>
+                    <select id="category" name="category" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 0.5rem; font-size: 1rem;">
+                        <option value="general">General Inquiry</option>
+                        <option value="membership">Membership Question</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="directory">Directory Listing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+
+            <div id="formMessage" style="margin-top: 1rem; padding: 1rem; border-radius: 0.5rem; display: none;"></div>
+        </section>
+
+        <section class="content-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>How do I become a member?</h3>
+                    <p>Visit our <a href="membership.html" style="color: var(--primary-blue); text-decoration: none;">Membership page</a> to learn about requirements and submit your application.</p>
+                </div>
+                <div class="card">
+                    <h3>How do I find a practitioner?</h3>
+                    <p>Use our <a href="directory.html" style="color: var(--primary-blue); text-decoration: none;">Practitioner Directory</a> to search for qualified neuro-acupuncture specialists in your area.</p>
+                </div>
+                <div class="card">
+                    <h3>What modalities does IANA recognize?</h3>
+                    <p>Learn about all recognized neuro-acupuncture modalities on our <a href="about.html" style="color: var(--primary-blue); text-decoration: none;">What is the IANA</a> page.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IANA</h3>
+                <p>International Association for Neuro Acupuncture</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">What is the IANA</a></li>
+                    <li><a href="directory.html">Find a Practitioner</a></li>
+                    <li><a href="membership.html">Become a Member</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>For inquiries, please visit our <a href="contact.html">Contact Us</a> page</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 International Association for Neuro Acupuncture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formMessage = document.getElementById('formMessage');
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = 'var(--light-blue)';
+            formMessage.style.color = 'var(--text-dark)';
+            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
