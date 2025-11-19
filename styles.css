@@ -379,6 +379,12 @@ main {
     display: none;
 }
 
+/* Hide ::before line when padding-left: 0 is set via inline styles */
+.content-section h3[style*="padding-left: 0"]::before,
+.content-section h3[style*="padding-left:0"]::before {
+    display: none;
+}
+
 .content-section h4 {
     font-size: 1.2rem;
     color: var(--text-primary);
