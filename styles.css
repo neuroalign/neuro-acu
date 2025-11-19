@@ -612,29 +612,49 @@ main {
 .practitioner-card {
     background-color: var(--background);
     border: 1px solid var(--border-light);
-    border-radius: 2px;
-    padding: 2rem;
-    transition: all 0.3s ease;
+    border-radius: 3px;
+    padding: 2.25rem;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.practitioner-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--accent-blue));
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 3px 0 0 3px;
 }
 
 .practitioner-card:hover {
     border-color: var(--primary-blue);
-    box-shadow: 0 6px 20px rgba(0, 61, 130, 0.06);
+    box-shadow: 0 8px 28px rgba(0, 61, 130, 0.1);
+    transform: translateY(-4px);
+}
+
+.practitioner-card:hover::after {
+    height: 100%;
 }
 
 .practitioner-card h3 {
     color: var(--primary-blue);
     margin-bottom: 0.5rem;
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .practitioner-card .specialty {
     color: var(--text-muted);
     font-style: normal;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
 }
 
 .practitioner-card .info-item {
