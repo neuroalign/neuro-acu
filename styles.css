@@ -244,6 +244,19 @@ main {
     margin-bottom: 1.5rem;
     font-weight: 600;
     letter-spacing: -0.02em;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-blue), var(--accent-blue));
+    border-radius: 2px;
 }
 
 .content-section h3 {
@@ -252,6 +265,19 @@ main {
     margin-bottom: 1rem;
     margin-top: 2.5rem;
     font-weight: 600;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.content-section h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    width: 4px;
+    height: 1.2rem;
+    background: var(--accent-blue);
+    border-radius: 2px;
 }
 
 .content-section h4 {
