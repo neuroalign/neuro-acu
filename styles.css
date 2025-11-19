@@ -670,11 +670,12 @@ main {
 .form-group select {
     width: 100%;
     padding: 0.875rem 1rem;
-    border: 1px solid var(--border-medium);
-    border-radius: 2px;
+    border: 2px solid var(--border-medium);
+    border-radius: 3px;
     font-size: 1rem;
     font-family: inherit;
-    transition: border-color 0.2s ease;
+    transition: all 0.3s ease;
+    background-color: var(--background);
 }
 
 .form-group input:focus,
@@ -682,6 +683,14 @@ main {
 .form-group select:focus {
     outline: none;
     border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 61, 130, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+    border-color: var(--accent-blue);
 }
 
 .form-group textarea {
@@ -693,8 +702,8 @@ main {
     background-color: var(--primary-blue);
     color: white;
     padding: 1rem 2.5rem;
-    border: none;
-    border-radius: 2px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 3px;
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
@@ -704,7 +713,18 @@ main {
 
 .submit-button:hover {
     background-color: var(--navy);
+    border-color: var(--navy);
     box-shadow: 0 6px 16px rgba(0, 61, 130, 0.2);
+    transform: translateY(-2px);
+}
+
+.submit-button:focus {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 3px;
+}
+
+.submit-button:active {
+    transform: translateY(0);
 }
 
 /* Footer */
