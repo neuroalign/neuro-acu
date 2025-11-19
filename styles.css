@@ -498,8 +498,10 @@ main {
     padding-left: 0;
 }
 
-.feature-item h3::before {
-    display: none;
+.feature-item h3::before,
+.content-section .feature-item h3::before,
+.features .feature-item h3::before {
+    display: none !important;
 }
 
 .feature-item p {
