@@ -669,6 +669,8 @@ main {
     margin-top: auto;
     width: fit-content;
     padding-top: 1.5rem;
+    text-align: center;
+    line-height: 1;
 }
 
 /* Form Embed */
