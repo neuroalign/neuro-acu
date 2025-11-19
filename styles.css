@@ -36,6 +36,18 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global focus styles for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline-color: var(--primary-blue);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
