@@ -495,22 +495,17 @@ main {
     font-size: 1.25rem;
     font-weight: 600;
     position: relative;
-    padding-left: 1.75rem;
+    padding-left: 0;
 }
 
 .feature-item h3::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent-blue);
-    font-weight: 700;
+    display: none;
 }
 
 .feature-item p {
     color: var(--text-secondary);
     line-height: 1.75;
     font-size: 1rem;
-    padding-left: 1.75rem;
 }
 
 /* Info Box */
