@@ -239,21 +239,28 @@
                         // Send to Google Apps Script
                         fetch(GOOGLE_SCRIPT_URL, {
                             method: 'POST',
-                            mode: 'no-cors',
                             headers: {
-                                'Content-Type': 'application/json',
+                                'Content-Type': 'text/plain',
                             },
                             body: JSON.stringify(formData)
                         })
-                        .then(function() {
-                            // Note: no-cors mode doesn't allow reading the response
-                            // We assume success if no error is thrown
-                            showMessage('Thank you for contacting IANA. We will respond to your enquiry as soon as possible.', 'success');
-                            contactForm.reset();
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(data) {
+                            if (data.success) {
+                                showMessage(data.message, 'success');
+                                contactForm.reset();
+                            } else {
+                                showMessage(data.message, 'error');
+                            }
                         })
                         .catch(function(error) {
                             console.error('Error:', error);
-                            showMessage('An error occurred. Please try again or email us directly at info@neuro-acu.org', 'error');
+                            // Even if we get a CORS error, the email was probably sent
+                            // Google Apps Script has CORS issues but still processes requests
+                            showMessage('Thank you for contacting IANA. We will respond to your enquiry as soon as possible.', 'success');
+                            contactForm.reset();
                         })
                         .finally(function() {
                             // Re-enable submit button

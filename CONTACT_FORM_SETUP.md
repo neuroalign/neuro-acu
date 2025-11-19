@@ -117,7 +117,24 @@ Before deploying, you need to authorize the script to send emails:
 
 ---
 
-## Step 5: Test the Contact Form
+## Step 5: Redeploy the Google Apps Script (IMPORTANT!)
+
+**After updating the script with your keys, you MUST create a new deployment:**
+
+1. Go back to your Google Apps Script editor
+2. Click **Deploy** (top right)
+3. Select **Manage deployments**
+4. Click the pencil icon ✏️ next to your existing deployment
+5. Under "Version", select **New version**
+6. Add a description: "Updated with keys"
+7. Click **Deploy**
+8. The URL will stay the same - you don't need to update contact.html again
+
+**Why is this necessary?** Google Apps Script caches the old code. Creating a new version ensures your changes are live.
+
+---
+
+## Step 6: Test the Contact Form
 
 ### Test Locally (Before Going Live)
 

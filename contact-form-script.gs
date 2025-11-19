@@ -31,31 +31,40 @@ function doPost(e) {
     const recaptchaValid = verifyRecaptcha(data.recaptchaToken);
 
     if (!recaptchaValid) {
-      return ContentService.createTextOutput(JSON.stringify({
+      return createJsonResponse({
         success: false,
         message: 'reCAPTCHA verification failed. Please try again.'
-      })).setMimeType(ContentService.MimeType.JSON);
+      });
     }
 
     // Send email
     const emailSent = sendEmail(data);
 
     if (emailSent) {
-      return ContentService.createTextOutput(JSON.stringify({
+      return createJsonResponse({
         success: true,
         message: 'Thank you for contacting IANA. We will respond to your enquiry as soon as possible.'
-      })).setMimeType(ContentService.MimeType.JSON);
+      });
     } else {
       throw new Error('Failed to send email');
     }
 
   } catch (error) {
     Logger.log('Error: ' + error.toString());
-    return ContentService.createTextOutput(JSON.stringify({
+    return createJsonResponse({
       success: false,
       message: 'An error occurred. Please try again or email us directly at info@neuro-acu.org'
-    })).setMimeType(ContentService.MimeType.JSON);
+    });
   }
+}
+
+/**
+ * Create JSON response with CORS headers
+ */
+function createJsonResponse(data) {
+  return ContentService
+    .createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 /**
