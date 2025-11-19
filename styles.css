@@ -382,7 +382,7 @@ main {
 /* Hide ::before line when padding-left: 0 is set via inline styles */
 .content-section h3[style*="padding-left: 0"]::before,
 .content-section h3[style*="padding-left:0"]::before {
-    display: none;
+    display: none !important;
 }
 
 .content-section h4 {
