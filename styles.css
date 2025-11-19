@@ -660,6 +660,13 @@ main {
     font-size: 1.1rem;
 }
 
+.pricing-card .cta-button-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
 /* Form Embed */
 .form-container {
     background-color: var(--background-grey);
