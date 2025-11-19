@@ -57,7 +57,12 @@
         </section>
 
         <section class="content-section">
-            <h3 style="text-align: center;">What Drives Us</h3>
+            <h3 style="text-align: center; padding-left: 0;">What Drives Us</h3>
+            <style>
+            section.content-section h3[style*="padding-left: 0"]::before {
+                display: none;
+            }
+            </style>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">We believe neuro acupuncture deserves recognition alongside mainstream neurological interventions. Here's how we're making that happen:</p>
 
             <div class="cards-grid">
