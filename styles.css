@@ -179,6 +179,12 @@ nav {
     background-color: transparent;
     color: white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.cta-button:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 3px;
 }
 
 .cta-button-primary {
@@ -199,6 +205,12 @@ nav {
     background-color: var(--navy);
     border-color: var(--navy);
     box-shadow: 0 6px 16px rgba(0, 61, 130, 0.25);
+    transform: translateY(-2px);
+}
+
+.cta-button-primary:focus {
+    outline: 3px solid var(--accent-blue);
+    outline-offset: 3px;
 }
 
 /* Main Content */
