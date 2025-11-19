@@ -663,14 +663,15 @@ main {
 }
 
 .pricing-card .cta-button-primary {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    width: fit-content;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
-    line-height: 1;
 }
 
 /* Form Embed */
