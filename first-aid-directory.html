@@ -56,31 +56,85 @@
 
         <section class="content-section">
             <h3>Recognised First Aid Training Providers</h3>
-            <p>Our directory of recognised first aid training providers is currently being developed. This will include providers who offer appropriate first aid qualifications for healthcare practitioners.</p>
-            <p>In the meantime, we recognise first aid qualifications from the following types of providers:</p>
-            <ul>
-                <li>St John Ambulance</li>
-                <li>British Red Cross</li>
-                <li>St Andrew's First Aid (Scotland)</li>
-                <li>Regulated first aid training providers offering Ofqual-accredited qualifications</li>
-                <li>Equivalent recognised providers in other jurisdictions</li>
-            </ul>
+            <p>The following first aid training providers deliver qualifications that are automatically accepted by IANA. Use the filter below to find providers by country.</p>
         </section>
+
+        <div class="directory-controls">
+            <div class="filter-group">
+                <label for="countryFilter">Filter by Country:</label>
+                <select id="countryFilter">
+                    <option value="all">All Countries</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="netherlands">Netherlands</option>
+                </select>
+            </div>
+
+            <div id="resultsCount" style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;"></div>
+        </div>
+
+        <div class="directory-grid" id="providerGrid">
+            <div class="practitioner-card" data-name="St John Ambulance" data-country="uk">
+                <h3>St John Ambulance</h3>
+                <p class="specialty">Leading first aid charity providing training and emergency response services across England and the Channel Islands</p>
+                <div class="info-item"><span class="info-label">Country:</span> United Kingdom</div>
+                <div class="info-item"><span class="info-label">Website:</span> www.sja.org.uk</div>
+                <div class="info-item"><span class="info-label">Courses:</span> First Aid at Work, Emergency First Aid at Work, and other Ofqual-accredited qualifications</div>
+            </div>
+
+            <div class="practitioner-card" data-name="St Andrew's Ambulance" data-country="uk">
+                <h3>St Andrew's Ambulance</h3>
+                <p class="specialty">Scotland's leading first aid charity delivering professional first aid training and emergency response</p>
+                <div class="info-item"><span class="info-label">Country:</span> United Kingdom (Scotland)</div>
+                <div class="info-item"><span class="info-label">Website:</span> www.firstaid.org.uk</div>
+                <div class="info-item"><span class="info-label">Courses:</span> First Aid at Work, Emergency First Aid at Work, and SQA-accredited qualifications</div>
+            </div>
+
+            <div class="practitioner-card" data-name="British Red Cross" data-country="uk">
+                <h3>The British Red Cross</h3>
+                <p class="specialty">International humanitarian organisation delivering first aid training, health and social care services throughout the UK</p>
+                <div class="info-item"><span class="info-label">Country:</span> United Kingdom</div>
+                <div class="info-item"><span class="info-label">Website:</span> www.redcross.org.uk</div>
+                <div class="info-item"><span class="info-label">Courses:</span> First Aid at Work, Emergency First Aid at Work, and tailored healthcare provider courses</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Rode Kruis" data-country="netherlands">
+                <h3>Rode Kruis (Red Cross Netherlands)</h3>
+                <p class="specialty">Leading Dutch humanitarian organisation providing first aid training and emergency response services</p>
+                <div class="info-item"><span class="info-label">Country:</span> Netherlands</div>
+                <div class="info-item"><span class="info-label">Website:</span> www.rodekruis.nl</div>
+                <div class="info-item"><span class="info-label">Courses:</span> Bedrijfshulpverlener (BHV), Eerste Hulp, and professional healthcare provider courses</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Het Oranje Kruis" data-country="netherlands">
+                <h3>Het Oranje Kruis (Orange Cross)</h3>
+                <p class="specialty">Dutch lifesaving and first aid organisation specialising in water safety and emergency response training</p>
+                <div class="info-item"><span class="info-label">Country:</span> Netherlands</div>
+                <div class="info-item"><span class="info-label">Website:</span> www.hetoranjekruis.nl</div>
+                <div class="info-item"><span class="info-label">Courses:</span> First aid qualifications including Bedrijfshulpverlener (BHV) and emergency response training</div>
+            </div>
+        </div>
+
+        <div id="noResults" style="display: none; text-align: center; padding: 4rem 2rem; background-color: var(--background-grey); border-radius: 2px; border: 1px solid var(--border-light);">
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0.5rem;">No providers found in the selected country.</p>
+            <p style="color: var(--text-muted);">Please adjust your filter selection.</p>
+        </div>
+
+        <div class="info-box" style="margin-top: 4rem;">
+            <h3>Other First Aid Qualifications</h3>
+            <p><strong>Case-by-Case Assessment:</strong> First aid certificates from other recognised providers will be assessed on a case-by-case basis during the membership application process.</p>
+            <p style="margin-top: 1rem;"><strong>International Applicants:</strong> In principle, if a first aid certificate is valid and recognised in the applicant's country of practice, it will be accepted by IANA. Members are required to maintain current, in-date first aid certification appropriate to their jurisdiction.</p>
+            <p style="margin-top: 1rem;">For questions regarding specific first aid qualifications, please <a href="contact.html" style="color: var(--primary-blue); font-weight: 500;">contact the IANA membership team</a>.</p>
+        </div>
 
         <section class="content-section">
             <h3>Recommended First Aid Courses</h3>
-            <p>IANA members should hold one of the following first aid qualifications:</p>
+            <p>IANA members practicing in the UK should typically hold one of the following first aid qualifications:</p>
             <ul>
-                <li><strong>First Aid at Work (FAW)</strong> - 3-day comprehensive course providing extensive first aid knowledge</li>
-                <li><strong>Emergency First Aid at Work (EFAW)</strong> - 1-day course covering essential first aid skills</li>
-                <li><strong>Level 3 Award in First Aid at Work</strong> - Ofqual-regulated qualification</li>
+                <li><strong>First Aid at Work (FAW)</strong> - 3-day comprehensive course providing extensive first aid knowledge for workplace first aiders</li>
+                <li><strong>Emergency First Aid at Work (EFAW)</strong> - 1-day course covering essential first aid skills and emergency response</li>
+                <li><strong>Level 3 Award in First Aid at Work</strong> - Ofqual-regulated qualification meeting Health and Safety Executive requirements</li>
             </ul>
-            <p>All qualifications must include CPR and be current (not expired).</p>
-        </section>
-
-        <section class="content-section">
-            <h3>Questions About First Aid Requirements?</h3>
-            <p>If you have questions about which first aid qualifications are acceptable for IANA membership, or need guidance on selecting appropriate first aid training, please <a href="contact.html">contact us</a>.</p>
+            <p style="margin-top: 1.5rem;">All qualifications must include CPR training and be current (not expired). Certificates typically require renewal every 3 years.</p>
         </section>
     </main>
 
@@ -151,6 +205,48 @@
                 });
             }
         });
+
+        // First Aid Provider Directory Filtering
+        const providerCards = document.querySelectorAll('#providerGrid .practitioner-card');
+        const countryFilter = document.getElementById('countryFilter');
+        const resultsCount = document.getElementById('resultsCount');
+        const noResults = document.getElementById('noResults');
+        const providerGrid = document.getElementById('providerGrid');
+
+        function filterProviders() {
+            const selectedCountry = countryFilter.value;
+            let visibleCount = 0;
+
+            providerCards.forEach(function(card) {
+                const cardCountry = card.getAttribute('data-country');
+
+                let countryMatch = selectedCountry === 'all' || cardCountry === selectedCountry;
+
+                if (countryMatch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update results count
+            if (visibleCount > 0) {
+                resultsCount.textContent = 'Showing ' + visibleCount + ' provider' + (visibleCount !== 1 ? 's' : '');
+                noResults.style.display = 'none';
+                providerGrid.style.display = 'grid';
+            } else {
+                resultsCount.textContent = '';
+                noResults.style.display = 'block';
+                providerGrid.style.display = 'none';
+            }
+        }
+
+        // Add event listeners
+        countryFilter.addEventListener('change', filterProviders);
+
+        // Initial filter
+        filterProviders();
     </script>
 </body>
 </html>

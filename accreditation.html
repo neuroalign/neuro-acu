@@ -141,23 +141,55 @@
         </section>
 
         <section class="content-section">
-            <h3>How to Apply</h3>
-            <ol style="color: var(--text-secondary); line-height: 1.8;">
-                <li style="margin-bottom: 1rem;"><strong>Review Requirements:</strong> Carefully review the requirements listed above</li>
-                <li style="margin-bottom: 1rem;"><strong>Prepare Documentation:</strong> Gather all required documentation including curriculum materials, staff credentials, and facility information</li>
-                <li style="margin-bottom: 1rem;"><strong>Apply for Training Provider Membership:</strong> Submit your training provider membership application with the £200 annual fee</li>
-                <li style="margin-bottom: 1rem;"><strong>Await Review:</strong> Your application will be reviewed within 3-5 working days</li>
-                <li style="margin-bottom: 1rem;"><strong>Submit Course Accreditation Applications:</strong> Once accepted as a training provider member, submit individual course accreditation applications (£150 per course)</li>
-                <li style="margin-bottom: 1rem;"><strong>Accreditation Review:</strong> Course applications are reviewed within 10-15 working days when all requirements are met</li>
-                <li style="margin-bottom: 1rem;"><strong>Receive Accreditation:</strong> Upon approval, receive your accreditation certificate and authorisation to use the IANA accreditation badge</li>
-            </ol>
+            <h3>Application Process</h3>
+            <div class="info-box">
+                <h3>Step-by-Step Guide</h3>
+                <ol>
+                    <li><strong>Review Requirements:</strong> Carefully review the requirements listed above</li>
+                    <li><strong>Prepare Documentation:</strong> Gather all required documentation including curriculum materials, staff credentials, and facility information</li>
+                    <li><strong>Apply for Training Provider Membership:</strong> Submit your training provider membership application with the £200 annual fee using the form below</li>
+                    <li><strong>Await Review:</strong> Your application will be reviewed within 3-5 working days</li>
+                    <li><strong>Submit Course Accreditation Applications:</strong> Once accepted as a training provider member, submit individual course accreditation applications (£150 per course)</li>
+                    <li><strong>Accreditation Review:</strong> Course applications are reviewed within 10-15 working days when all requirements are met</li>
+                    <li><strong>Receive Accreditation:</strong> Upon approval, receive your accreditation certificate and authorisation to use the IANA accreditation badge</li>
+                </ol>
+            </div>
         </section>
 
         <section class="content-section">
-            <h3>Contact Us About Accreditation</h3>
-            <p>If you represent a training organisation interested in IANA accreditation for your Neuro Acupuncture courses, please contact us to discuss your requirements and begin the application process.</p>
-            <p style="margin-top: 2rem;">
-                <a href="contact.html" class="cta-button-primary">Contact Us</a>
+            <h3>Training Provider Membership Application</h3>
+            <p>Complete the form below to apply for IANA training provider membership. All fields marked with an asterisk (*) are required.</p>
+
+            <div class="form-container">
+                <div style="background: white; padding: 3rem; border-radius: 2px; text-align: center; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.25rem; font-size: 1.4rem;">Application Form Integration</h3>
+                    <div style="max-width: 600px; text-align: left;">
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">To activate the training provider application form:</p>
+                        <ol style="color: var(--text-secondary); line-height: 1.8;">
+                            <li style="margin-bottom: 1rem;">Create your Google Form for training provider applications</li>
+                            <li style="margin-bottom: 1rem;">In Google Forms, click 'Send' → select the embed icon (&lt;&gt;)</li>
+                            <li style="margin-bottom: 1rem;">Copy the iframe source URL</li>
+                            <li style="margin-bottom: 1rem;">Open <code style="background: var(--background-grey); padding: 0.25rem 0.5rem; border-radius: 2px;">accreditation.html</code></li>
+                            <li style="margin-bottom: 1rem;">Locate the iframe placeholder below and replace with your form URL</li>
+                        </ol>
+                        <div style="background: var(--background-grey); padding: 1.25rem; margin-top: 1.5rem; border-radius: 2px; border: 1px solid var(--border-light);">
+                            <code style="font-size: 0.9rem; color: var(--text-primary); display: block; word-wrap: break-word;">
+                                &lt;iframe src="YOUR_FORM_URL" width="100%" height="1200" frameborder="0"&gt;&lt;/iframe&gt;
+                            </code>
+                        </div>
+                        <p style="color: var(--text-muted); margin-top: 1.5rem; font-size: 0.9rem;"><em>Once embedded, applicants can complete the training provider membership application directly on this page.</em></p>
+                    </div>
+                </div>
+                <!-- Replace the placeholder above with your embedded Google Form iframe -->
+                <!-- <iframe src="YOUR_GOOGLE_FORM_URL" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Accreditation Enquiries</h3>
+            <p>For questions regarding training provider membership, course accreditation requirements, or the application process, please contact our accreditation team.</p>
+            <p style="margin-top: 1.5rem;">
+                <a href="contact.html" class="cta-button-primary">Contact Accreditation Team</a>
             </p>
         </section>
     </main>

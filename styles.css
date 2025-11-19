@@ -151,7 +151,7 @@ nav {
     border-radius: var(--radius-md);
     box-shadow: 0 8px 24px rgba(0, 61, 130, 0.12);
     min-width: 260px;
-    padding: 0.75rem 0;
+    padding: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -161,14 +161,17 @@ nav {
     margin-top: 0.5rem;
     max-height: 0;
     overflow: hidden;
+    display: none;
 }
 
 .nav-links .has-dropdown:hover .dropdown,
 .nav-links .has-dropdown.dropdown-active .dropdown {
+    display: block;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     max-height: 500px;
+    padding: 0.75rem 0;
 }
 
 .nav-links .dropdown li {
@@ -334,6 +337,11 @@ main {
     border-radius: 2px;
 }
 
+.text-center h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .content-section h3 {
     font-size: 1.5rem;
     color: var(--text-primary);
@@ -353,6 +361,14 @@ main {
     height: 1.2rem;
     background: var(--accent-blue);
     border-radius: 2px;
+}
+
+.pricing-card h3 {
+    padding-left: 0;
+}
+
+.pricing-card h3::before {
+    display: none;
 }
 
 .content-section h4 {
@@ -720,6 +736,9 @@ main {
     padding: 2.25rem;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .practitioner-card::after {
