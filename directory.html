@@ -13,14 +13,26 @@
             <div class="logo">
                 <a href="index.html"><img src="IANA-Logo-T-M.png" alt="IANA Logo"></a>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+                        <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About IANA</a></li>
-                <li><a href="directory.html" class="active">Find a Practitioner</a></li>
-                <li><a href="membership.html">Membership</a></li>
-                <li><a href="accreditation.html">For Training Providers</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown">
+                    <a href="directory.html">IANA Practitioners</a>
+                    <ul class="dropdown">
+                        <li><a href="directory.html">Find a Practitioner</a></li>
+                        <li><a href="membership.html">Join IANA</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="training.html">Training</a>
+                    <ul class="dropdown">
+                        <li><a href="training.html">Find IANA-Accredited Training</a></li>
+                        <li><a href="accreditation.html">Join IANA as a Training Provider</a></li>
+                        <li><a href="first-aid-directory.html">First Aid Training Providers</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -219,59 +231,20 @@
         </div>
     </footer>
 
-    <script>
+        <script>
         document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        const searchInput = document.getElementById('searchInput');
-        const modalityFilter = document.getElementById('modalityFilter');
-        const practitionerCards = document.querySelectorAll('.practitioner-card');
-        const resultsCount = document.getElementById('resultsCount');
-        const noResults = document.getElementById('noResults');
-        const practitionerGrid = document.getElementById('practitionerGrid');
-
-        function filterPractitioners() {
-            const searchTerm = searchInput.value.toLowerCase();
-            const selectedModality = modalityFilter.value;
-            let visibleCount = 0;
-
-            practitionerCards.forEach(card => {
-                const name = card.getAttribute('data-name').toLowerCase();
-                const location = card.getAttribute('data-location').toLowerCase();
-                const modalities = card.getAttribute('data-modalities');
-                const specialty = card.querySelector('.specialty').textContent.toLowerCase();
-
-                const matchesSearch = name.includes(searchTerm) ||
-                                    location.includes(searchTerm) ||
-                                    specialty.includes(searchTerm);
-
-                const matchesModality = selectedModality === 'all' ||
-                                       modalities.includes(selectedModality);
-
-                if (matchesSearch && matchesModality) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
+        // Dropdown menu handling
+        document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('dropdown-active');
                 }
             });
-
-            resultsCount.textContent = `Showing ${visibleCount} practitioner${visibleCount !== 1 ? 's' : ''}`;
-
-            if (visibleCount === 0) {
-                practitionerGrid.style.display = 'none';
-                noResults.style.display = 'block';
-            } else {
-                practitionerGrid.style.display = 'grid';
-                noResults.style.display = 'none';
-            }
-        }
-
-        searchInput.addEventListener('input', filterPractitioners);
-        modalityFilter.addEventListener('change', filterPractitioners);
-
-        filterPractitioners();
+        });
     </script>
 </body>
 </html>

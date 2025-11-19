@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - International Association for Neuro Acupuncture</title>
+    <title>IANA-Accredited Training - International Association for Neuro Acupuncture</title>
     <link rel="icon" type="image/png" href="IANA-Sq-T-M.png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +13,7 @@
             <div class="logo">
                 <a href="index.html"><img src="IANA-Logo-T-M.png" alt="IANA Logo"></a>
             </div>
-                        <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,7 +25,7 @@
                     </ul>
                 </li>
                 <li class="has-dropdown">
-                    <a href="training.html">Training</a>
+                    <a href="training.html" class="active">Training</a>
                     <ul class="dropdown">
                         <li><a href="training.html">Find IANA-Accredited Training</a></li>
                         <li><a href="accreditation.html">Join IANA as a Training Provider</a></li>
@@ -39,76 +39,31 @@
 
     <main>
         <section class="content-section">
-            <h2>Contact IANA</h2>
-            <p>For enquiries regarding membership, professional development programmes, or general information about the International Association for Neuro Acupuncture, please contact us using the details or form below.</p>
+            <h2>IANA-Accredited Training Directory</h2>
+            <p>Find IANA-accredited neuro acupuncture training programmes delivered by recognised training providers who meet our rigorous educational standards.</p>
         </section>
 
         <div class="info-box">
-            <h3>Contact Information</h3>
-            <p><strong>Email:</strong> info@neuro-acu.org</p>
-            <p><strong>Membership Enquiries:</strong> membership@neuro-acu.org</p>
-            <p><strong>General Enquiries:</strong> contact@neuro-acu.org</p>
+            <h3>About IANA-Accredited Training</h3>
+            <p>All training programmes listed here have been assessed and accredited by IANA, ensuring they meet our professional standards for curriculum, practical training, assessment, and qualification outcomes.</p>
+            <p>IANA accreditation provides assurance that training equips students with the knowledge and skills necessary to practice neuro acupuncture safely and effectively.</p>
         </div>
 
         <section class="content-section">
-            <h3>Enquiry Form</h3>
-            <p>Please complete the form below and we will respond to your enquiry as soon as possible.</p>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="category">Enquiry Type</label>
-                    <select id="category" name="category">
-                        <option value="general">General Enquiry</option>
-                        <option value="membership">Membership</option>
-                        <option value="cpd">Professional Development</option>
-                        <option value="directory">Directory Listing</option>
-                        <option value="research">Research & Evidence</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-button">Submit Enquiry</button>
-            </form>
-
-            <div id="formMessage" style="margin-top: 1.5rem; padding: 1.25rem; border-radius: 2px; display: none; background-color: var(--light-blue); border: 1px solid var(--border-light);"></div>
+            <h3>Training Provider Directory Coming Soon</h3>
+            <p>Our comprehensive directory of IANA-accredited training providers and courses is currently being developed. This directory will include:</p>
+            <ul>
+                <li>Searchable database of accredited training providers</li>
+                <li>Detailed course information including duration, location, and modalities taught</li>
+                <li>Information about course accreditation status and renewal dates</li>
+                <li>Contact details for training enquiries</li>
+            </ul>
+            <p>In the meantime, for information about IANA-accredited training programmes, please <a href="contact.html">contact us</a>.</p>
         </section>
 
         <section class="content-section">
-            <h3>Frequently Asked Questions</h3>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Membership Applications</h3>
-                    <p>For information on membership requirements, application procedures, and professional standards, please visit our <a href="membership.html" style="color: var(--primary-blue); font-weight: 500;">Membership page</a>.</p>
-                </div>
-                <div class="card">
-                    <h3>Practitioner Directory</h3>
-                    <p>To find a qualified neuro acupuncture practitioner in your area, please visit our <a href="directory.html" style="color: var(--primary-blue); font-weight: 500;">Practitioner Directory</a>.</p>
-                </div>
-                <div class="card">
-                    <h3>Professional Standards</h3>
-                    <p>Information about recognised modalities, professional requirements, and clinical standards is available on our <a href="about.html" style="color: var(--primary-blue); font-weight: 500;">About IANA page</a>.</p>
-                </div>
-            </div>
+            <h3>Training Provider Accreditation</h3>
+            <p>If you are a training provider interested in having your neuro acupuncture courses accredited by IANA, please visit our <a href="accreditation.html">Training Provider Accreditation</a> page for detailed information about the application process, requirements, and fees.</p>
         </section>
     </main>
 
@@ -149,7 +104,7 @@
         </div>
     </footer>
 
-        <script>
+    <script>
         document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });

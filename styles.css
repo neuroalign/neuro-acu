@@ -137,6 +137,62 @@ nav {
     color: var(--text-primary);
 }
 
+/* Dropdown Navigation */
+.nav-links .has-dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0, 61, 130, 0.12);
+    min-width: 260px;
+    padding: 0.75rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.nav-links .has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-links .dropdown li {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-links .dropdown a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-links .dropdown a::after {
+    display: none;
+}
+
+.nav-links .dropdown a:hover,
+.nav-links .dropdown a.active {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    border-left-color: var(--primary-blue);
+    padding-left: 1.5rem;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 61, 130, 0.85), rgba(0, 31, 63, 0.85)), url('pexels-shvetsa-4226264.jpg') center/cover no-repeat;
@@ -980,6 +1036,53 @@ footer {
 
     .mobile-menu-toggle:hover {
         transform: scale(1.1);
+    }
+
+    /* Mobile Dropdown Styles */
+    .nav-links .has-dropdown {
+        position: relative;
+    }
+
+    .nav-links .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        display: none;
+        min-width: auto;
+    }
+
+    .nav-links .has-dropdown.dropdown-active .dropdown {
+        display: block;
+    }
+
+    .nav-links .dropdown li {
+        border-bottom: 1px solid rgba(209, 220, 230, 0.2);
+        padding-left: 1.5rem;
+    }
+
+    .nav-links .dropdown a {
+        padding: 0.85rem 1rem;
+        font-size: 0.85rem;
+        background-color: rgba(248, 249, 250, 0.5);
+    }
+
+    .nav-links .has-dropdown > a::before {
+        content: '▼';
+        font-size: 0.7rem;
+        margin-right: 0.5rem;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .nav-links .has-dropdown.dropdown-active > a::before {
+        transform: rotate(180deg);
     }
 
     .hero {
