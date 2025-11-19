@@ -284,12 +284,14 @@ main {
     border: 1px solid var(--border-light);
     border-radius: 2px;
     padding: 2.25rem;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .card:hover {
     border-color: var(--primary-blue);
-    box-shadow: 0 8px 24px rgba(0, 61, 130, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 61, 130, 0.12);
+    transform: translateY(-4px);
 }
 
 .card h3 {
