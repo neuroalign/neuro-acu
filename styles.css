@@ -574,6 +574,8 @@ main {
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--background);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -664,7 +666,9 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
     width: fit-content;
+    padding-top: 1.5rem;
 }
 
 /* Form Embed */
