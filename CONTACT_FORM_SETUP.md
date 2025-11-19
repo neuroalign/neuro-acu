@@ -54,7 +54,28 @@ The contact form uses:
 
 ---
 
-## Step 3: Deploy Google Apps Script (5 minutes)
+## Step 3: Authorize and Deploy Google Apps Script (5 minutes)
+
+### First: Authorize the Script
+
+Before deploying, you need to authorize the script to send emails:
+
+1. In the Google Apps Script editor, find the function dropdown at the top
+2. Select **doPost** from the dropdown
+3. Click the **Run** button (▶️ play icon)
+4. A popup will appear: **"Authorization required"**
+5. Click **Review permissions**
+6. Choose your Google account
+7. You'll see: **"Google hasn't verified this app"**
+   - This is normal! You created the app, so it's safe
+8. Click **Advanced** (bottom left)
+9. Click **Go to IANA Contact Form Handler (unsafe)**
+10. Click **Allow**
+11. The script will run and you might see an error - **this is normal!** (it's trying to process a POST request that doesn't exist)
+
+**Important**: You've now authorized the script. Continue to deployment.
+
+### Then: Deploy the Script
 
 1. In the Google Apps Script editor, click **Deploy** (top right)
 2. Select **New deployment**
@@ -65,12 +86,7 @@ The contact form uses:
    - **Execute as**: **Me** (your email address)
    - **Who has access**: **Anyone**
 6. Click **Deploy**
-7. **Authorize the app**:
-   - Click **Authorize access**
-   - Choose your Google account
-   - Click **Advanced** (if you see a warning)
-   - Click **Go to IANA Contact Form Handler (unsafe)**
-   - Click **Allow**
+7. **You should NOT see an authorization screen this time** (you already authorized it above)
 8. **Copy the Web App URL** - it will look like:
    ```
    https://script.google.com/macros/s/ABC123.../exec
