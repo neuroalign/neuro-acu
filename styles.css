@@ -1047,6 +1047,201 @@ footer {
     }
 }
 
+/* Directory Coming Soon Styles */
+.directory-coming-soon {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.directory-coming-soon h3 {
+    color: var(--primary-blue);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.directory-coming-soon h3::before {
+    display: none;
+}
+
+.directory-features {
+    background: var(--background-grey);
+    padding: 2rem;
+    border-radius: 3px;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.check-list li {
+    padding-left: 1.75rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.notify-signup {
+    background: white;
+    border: 2px solid var(--border-light);
+    padding: 2.5rem;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.notify-signup h4 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.notify-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.notify-form input[type="email"] {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border-medium);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.notify-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* Membership Page - What's Available Styles */
+.availability-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 3px;
+    border: 1px solid var(--border-light);
+}
+
+.availability-box h4 {
+    color: var(--primary-blue);
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+}
+
+.available-now {
+    border-left: 4px solid var(--primary-blue);
+}
+
+.in-development {
+    border-left: 4px solid var(--border-medium);
+}
+
+.pending-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pending-list li {
+    padding-left: 1.75rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.pending-list li::before {
+    content: "○";
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+}
+
+/* Accreditation Page - Provider Cards */
+.accredited-providers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.provider-card {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    padding: 2rem;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.provider-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.provider-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.accredited-programmes {
+    background: var(--background-grey);
+    padding: 1.25rem;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.accredited-programmes p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.accredited-programmes ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.accredited-programmes li {
+    margin-bottom: 0.35rem;
+}
+
+.provider-link {
+    color: var(--primary-blue);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.provider-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .notify-form {
+        flex-direction: column;
+    }
+
+    .content-section > div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
