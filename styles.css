@@ -208,6 +208,16 @@ nav {
     padding-left: 1.5rem;
 }
 
+.nav-badge {
+    font-size: 0.7rem;
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 0.15rem 0.4rem;
+    border-radius: 2px;
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 61, 130, 0.85), rgba(0, 31, 63, 0.85)), url('pexels-shvetsa-4226264.jpg') center/cover no-repeat;
@@ -305,6 +315,24 @@ nav {
 .cta-button-primary:focus {
     outline: 3px solid var(--accent-blue);
     outline-offset: 3px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button-secondary:hover {
+    background-color: white;
+    color: var(--primary-blue);
 }
 
 /* Main Content */
