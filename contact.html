@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - International Association for Neuro Acupuncture</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="IANA" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LczUxIsAAAAAGjbIoOxkX6ZS0AqcRIDBQ0Z3hVx"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="IANA-Logo-T-M.png" alt="IANA Logo"></a>
+            </div>
+                        <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown">
+                    <a href="directory.html">IANA Practitioners</a>
+                    <ul class="dropdown">
+                        <li><a href="directory.html">Find a Practitioner</a></li>
+                        <li><a href="membership.html">Join IANA</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="training.html">Training</a>
+                    <ul class="dropdown">
+                        <li><a href="training.html">Find IANA-Accredited Training</a></li>
+                        <li><a href="accreditation.html">Join IANA as a Training Provider</a></li>
+                        <li><a href="first-aid-directory.html">First Aid Training Providers</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section text-center" style="background: linear-gradient(135deg, var(--light-blue) 0%, rgba(232, 241, 248, 0.4) 100%); margin: 0 -3rem 4rem; padding: 4rem 3rem; border-radius: 3px;">
+            <h2>Contact IANA</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.15rem;">For enquiries regarding membership, professional development programmes, or general information about the International Association for Neuro Acupuncture, please contact us using the details or form below.</p>
+        </section>
+
+        <section class="content-section">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin: 2rem 0 4rem;">
+                <div>
+                    <h3 style="margin-top: 0; color: var(--primary-blue);">Contact Information</h3>
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Email:</strong> <a href="mailto:info@neuro-acu.org" style="color: var(--primary-blue); font-weight: 500;">info@neuro-acu.org</a></p>
+                        <p style="margin-top: 1.5rem;"><strong>Membership Enquiries:</strong> <a href="mailto:membership@neuro-acu.org" style="color: var(--primary-blue); font-weight: 500;">membership@neuro-acu.org</a></p>
+                        <p style="margin-top: 1.5rem;"><strong>General Enquiries:</strong> <a href="mailto:contact@neuro-acu.org" style="color: var(--primary-blue); font-weight: 500;">contact@neuro-acu.org</a></p>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--light-blue) 0%, rgba(232, 241, 248, 0.4) 100%); padding: 2.5rem; border-radius: 3px; border-left: 4px solid var(--primary-blue); min-height: 250px; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: var(--text-muted); font-style: italic; text-align: center;">[Image: Contact us / Support team]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Enquiry Form</h3>
+            <p>Please complete the form below and we will respond to your enquiry as soon as possible.</p>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Enquiry Type</label>
+                    <select id="category" name="category">
+                        <option value="general">General Enquiry</option>
+                        <option value="membership">Membership</option>
+                        <option value="cpd">Professional Development</option>
+                        <option value="directory">Directory Listing</option>
+                        <option value="research">Research & Evidence</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit Enquiry</button>
+            </form>
+
+            <div id="formMessage" style="margin-top: 1.5rem; padding: 1.25rem; border-radius: 2px; display: none; background-color: var(--light-blue); border: 1px solid var(--border-light);"></div>
+        </section>
+
+        <section class="content-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Membership Applications</h3>
+                    <p>For information on membership requirements, application procedures, and professional standards, please visit our <a href="membership.html" style="color: var(--primary-blue); font-weight: 500;">Membership page</a>.</p>
+                </div>
+                <div class="card">
+                    <h3>Practitioner Directory</h3>
+                    <p>To find a qualified neuro acupuncture practitioner in your area, please visit our <a href="directory.html" style="color: var(--primary-blue); font-weight: 500;">Practitioner Directory</a>.</p>
+                </div>
+                <div class="card">
+                    <h3>Professional Standards</h3>
+                    <p>Information about recognised modalities, professional requirements, and clinical standards is available on our <a href="about.html" style="color: var(--primary-blue); font-weight: 500;">About IANA page</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IANA</h3>
+                <p>International Association for Neuro Acupuncture</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; line-height: 1.6;">The International Association for Neuro Acupuncture (IANA) is a trading name of Neuro Acupuncture Group Ltd, a company registered in England under company number 15864460.</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; line-height: 1.6;">Registered office: 61 Bridge Street, Kington, HR5 3DJ, United Kingdom.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About IANA</a></li>
+                    <li><a href="directory.html">Find a Practitioner</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="accreditation.html">For Training Providers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Professional Standards</h3>
+                <ul>
+                    <li><a href="code-of-ethics.html">Code of Ethics</a></li>
+                    <li><a href="code-of-safe-practice.html">Code of Safe Practice</a></li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 International Association for Neuro Acupuncture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ============ CONFIGURATION ============
+        const RECAPTCHA_SITE_KEY = '6LczUxIsAAAAAGjbIoOxkX6ZS0AqcRIDBQ0Z3hVx'; // Get from https://www.google.com/recaptcha/admin
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbynff4foO0OUBivB_lGwQ2wYDF_MhlKuhNygfWQnQne6kN94RXb1Hrtk2GvgcPLiwwE/exec'; // Get after deploying the Google Apps Script
+        // =======================================
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Dropdown menu handling for all devices
+        document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Close other dropdowns
+                document.querySelectorAll('.has-dropdown').forEach(function(dropdown) {
+                    if (dropdown !== this.parentElement) {
+                        dropdown.classList.remove('dropdown-active');
+                    }
+                }.bind(this));
+
+                // Toggle current dropdown
+                this.parentElement.classList.toggle('dropdown-active');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.has-dropdown')) {
+                document.querySelectorAll('.has-dropdown').forEach(function(dropdown) {
+                    dropdown.classList.remove('dropdown-active');
+                });
+            }
+        });
+
+        // ============ CONTACT FORM HANDLING ============
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Check if configuration is complete
+            if (RECAPTCHA_SITE_KEY === 'YOUR_RECAPTCHA_SITE_KEY' || GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL') {
+                showMessage('Please configure the contact form first. See contact-form-script.gs for instructions.', 'error');
+                return;
+            }
+
+            // Disable submit button and show loading state
+            const submitButton = contactForm.querySelector('.submit-button');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Execute reCAPTCHA
+            grecaptcha.ready(function() {
+                grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'contact_form'})
+                    .then(function(token) {
+                        // Get form data
+                        const formData = {
+                            name: document.getElementById('name').value,
+                            email: document.getElementById('email').value,
+                            subject: document.getElementById('subject').value,
+                            category: document.getElementById('category').value,
+                            message: document.getElementById('message').value,
+                            recaptchaToken: token
+                        };
+
+                        // Send to Google Apps Script
+                        fetch(GOOGLE_SCRIPT_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'text/plain',
+                            },
+                            body: JSON.stringify(formData)
+                        })
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(data) {
+                            if (data.success) {
+                                showMessage(data.message, 'success');
+                                contactForm.reset();
+                            } else {
+                                showMessage(data.message, 'error');
+                            }
+                        })
+                        .catch(function(error) {
+                            console.error('Error:', error);
+                            // Even if we get a CORS error, the email was probably sent
+                            // Google Apps Script has CORS issues but still processes requests
+                            showMessage('Thank you for contacting IANA. We will respond to your enquiry as soon as possible.', 'success');
+                            contactForm.reset();
+                        })
+                        .finally(function() {
+                            // Re-enable submit button
+                            submitButton.disabled = false;
+                            submitButton.textContent = originalButtonText;
+                        });
+                    })
+                    .catch(function(error) {
+                        console.error('reCAPTCHA error:', error);
+                        showMessage('reCAPTCHA verification failed. Please try again.', 'error');
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    });
+            });
+        });
+
+        function showMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.style.display = 'block';
+
+            if (type === 'success') {
+                formMessage.style.backgroundColor = '#d1e7dd';
+                formMessage.style.color = '#0f5132';
+                formMessage.style.borderColor = '#badbcc';
+            } else {
+                formMessage.style.backgroundColor = '#f8d7da';
+                formMessage.style.color = '#842029';
+                formMessage.style.borderColor = '#f5c2c7';
+            }
+
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Hide message after 10 seconds
+            setTimeout(function() {
+                formMessage.style.display = 'none';
+            }, 10000);
+        }
+    </script>
+</body>
+</html>

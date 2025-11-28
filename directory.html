@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practitioner Directory - International Association for Neuro Acupuncture</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="IANA" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="IANA-Logo-T-M.png" alt="IANA Logo"></a>
+            </div>
+                        <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown">
+                    <a href="directory.html">IANA Practitioners</a>
+                    <ul class="dropdown">
+                        <li><a href="directory.html">Find a Practitioner</a></li>
+                        <li><a href="membership.html">Join IANA</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="training.html">Training</a>
+                    <ul class="dropdown">
+                        <li><a href="training.html">Find IANA-Accredited Training</a></li>
+                        <li><a href="accreditation.html">Join IANA as a Training Provider</a></li>
+                        <li><a href="first-aid-directory.html">First Aid Training Providers</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section text-center" style="background: linear-gradient(135deg, var(--light-blue) 0%, rgba(232, 241, 248, 0.4) 100%); margin: 0 -3rem 4rem; padding: 4rem 3rem; border-radius: 3px;">
+            <h2>Practitioner Directory</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.15rem;">Find qualified IANA members specialising in neuro acupuncture modalities. All listed practitioners maintain current professional registration and have demonstrated specialist training in recognised neuro acupuncture techniques.</p>
+        </section>
+
+        <div class="directory-controls">
+            <div class="directory-search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by practitioner name, location, or modality..."
+                    aria-label="Search practitioners"
+                >
+            </div>
+
+            <div class="filter-group">
+                <label for="modalityFilter">Filter by Modality:</label>
+                <select id="modalityFilter">
+                    <option value="all">All Modalities</option>
+                    <option value="zhu">Zhu's Scalp Acupuncture</option>
+                    <option value="fang">Fang's Scalp Acupuncture</option>
+                    <option value="tang">Tang's Scalp Acupuncture</option>
+                    <option value="ynsa">YNSA</option>
+                    <option value="neurorelief">NeuroRelief Method</option>
+                    <option value="neurorehab">NeuroRehab Method</option>
+                    <option value="neurobalance">NeuroBalance Method</option>
+                </select>
+            </div>
+
+            <div id="resultsCount" style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.95rem;"></div>
+        </div>
+
+        <div class="directory-grid" id="practitionerGrid">
+            <div class="practitioner-card" data-name="Dr Sarah Chen" data-location="London, United Kingdom" data-modalities="zhu neurorelief neurorehab">
+                <h3>Dr Sarah Chen, L.Ac., MSTCM</h3>
+                <p class="specialty">Zhu's Scalp Acupuncture, NeuroAlign Methods (NeuroRelief & NeuroRehab)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25006</div>
+                <div class="info-item"><span class="info-label">Location:</span> London, United Kingdom</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:contact@sarahchenacupuncture.co.uk">contact@sarahchenacupuncture.co.uk</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.sarahchenacupuncture.co.uk" target="_blank" rel="noopener">www.sarahchenacupuncture.co.uk</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Michael O'Brien" data-location="Dublin, Ireland" data-modalities="fang ynsa">
+                <h3>Dr Michael O'Brien, L.Ac., DAOM</h3>
+                <p class="specialty">Fang's Scalp Acupuncture, YNSA</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25002</div>
+                <div class="info-item"><span class="info-label">Location:</span> Dublin, Ireland</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:info@dublinneuro.ie">info@dublinneuro.ie</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +353 1 555 0123</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Emily Thompson" data-location="Manchester, United Kingdom" data-modalities="tang neurobalance">
+                <h3>Dr Emily Thompson, L.Ac., MSc</h3>
+                <p class="specialty">Tang's Scalp Acupuncture, NeuroAlign Methods (NeuroBalance)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25011</div>
+                <div class="info-item"><span class="info-label">Location:</span> Manchester, United Kingdom</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:emily@manchesterneuro.co.uk">emily@manchesterneuro.co.uk</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.manchesterneuro.co.uk" target="_blank" rel="noopener">www.manchesterneuro.co.uk</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr James Park" data-location="Edinburgh, United Kingdom" data-modalities="zhu tang ynsa">
+                <h3>Dr James Park, R.Ac., DTCM</h3>
+                <p class="specialty">Zhu's & Tang's Scalp Acupuncture, YNSA</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25005</div>
+                <div class="info-item"><span class="info-label">Location:</span> Edinburgh, United Kingdom</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:drpark@edinburghneuro.co.uk">drpark@edinburghneuro.co.uk</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +44 131 555 0789</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Maria Santos" data-location="Melbourne, Australia" data-modalities="fang neurorehab neurobalance">
+                <h3>Dr Maria Santos, L.Ac., PhD</h3>
+                <p class="specialty">Fang's Scalp Acupuncture, NeuroAlign Methods (NeuroRehab & NeuroBalance)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25008</div>
+                <div class="info-item"><span class="info-label">Location:</span> Melbourne, Australia</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:maria@melbourneneuro.com.au">maria@melbourneneuro.com.au</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.melbourneneuro.com.au" target="_blank" rel="noopener">www.melbourneneuro.com.au</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr David Lee" data-location="Singapore" data-modalities="zhu fang tang">
+                <h3>Dr David Lee, L.Ac., TCM</h3>
+                <p class="specialty">Zhu's, Fang's & Tang's Scalp Acupuncture</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25001</div>
+                <div class="info-item"><span class="info-label">Location:</span> Singapore</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:info@singaporescalp.sg">info@singaporescalp.sg</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +65 6555 1234</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Anna Kowalski" data-location="Berlin, Germany" data-modalities="neurorelief neurorehab ynsa">
+                <h3>Dr Anna Kowalski, L.Ac., MSc</h3>
+                <p class="specialty">YNSA, NeuroAlign Methods (NeuroRelief & NeuroRehab)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25010</div>
+                <div class="info-item"><span class="info-label">Location:</span> Berlin, Germany</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:anna@berlinneuro.de">anna@berlinneuro.de</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.berlinneuro.de" target="_blank" rel="noopener">www.berlinneuro.de</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Robert Kim" data-location="Seoul, South Korea" data-modalities="zhu ynsa neurobalance">
+                <h3>Dr Robert Kim, L.Ac., OMD</h3>
+                <p class="specialty">Zhu's Scalp Acupuncture, YNSA, NeuroAlign Methods (NeuroBalance)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25004</div>
+                <div class="info-item"><span class="info-label">Location:</span> Seoul, South Korea</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:drkim@seoulneuro.kr">drkim@seoulneuro.kr</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +82 2 555 4321</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Patricia Nguyen" data-location="Birmingham, United Kingdom" data-modalities="fang tang neurorehab">
+                <h3>Dr Patricia Nguyen, L.Ac., DAOM</h3>
+                <p class="specialty">Fang's & Tang's Scalp Acupuncture, NeuroAlign Methods (NeuroRehab)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25009</div>
+                <div class="info-item"><span class="info-label">Location:</span> Birmingham, United Kingdom</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:patricia@birminghamneuro.co.uk">patricia@birminghamneuro.co.uk</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.birminghamneuro.co.uk" target="_blank" rel="noopener">www.birminghamneuro.co.uk</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Thomas Anderson" data-location="Stockholm, Sweden" data-modalities="zhu ynsa neurorelief neurobalance">
+                <h3>Dr Thomas Anderson, L.Ac., MSc</h3>
+                <p class="specialty">Zhu's Scalp Acupuncture, YNSA, NeuroAlign Methods (NeuroRelief & NeuroBalance)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25012</div>
+                <div class="info-item"><span class="info-label">Location:</span> Stockholm, Sweden</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:thomas@stockholmneuro.se">thomas@stockholmneuro.se</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +46 8 555 6789</div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Lisa Martinez" data-location="Bristol, United Kingdom" data-modalities="tang neurorehab">
+                <h3>Dr Lisa Martinez, L.Ac., MSTCM</h3>
+                <p class="specialty">Tang's Scalp Acupuncture, NeuroAlign Methods (NeuroRehab)</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25007</div>
+                <div class="info-item"><span class="info-label">Location:</span> Bristol, United Kingdom</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:lisa@bristolneuro.co.uk">lisa@bristolneuro.co.uk</a></div>
+                <div class="info-item"><span class="info-label">Website:</span> <a href="https://www.bristolneuro.co.uk" target="_blank" rel="noopener">www.bristolneuro.co.uk</a></div>
+            </div>
+
+            <div class="practitioner-card" data-name="Dr Wei Zhang" data-location="Vancouver, Canada" data-modalities="zhu fang ynsa neurorelief neurorehab neurobalance">
+                <h3>Dr Wei Zhang, L.Ac., PhD</h3>
+                <p class="specialty">Zhu's & Fang's Scalp Acupuncture, YNSA, NeuroAlign Methods</p>
+                <div class="info-item"><span class="info-label">Member:</span> IANA-25003</div>
+                <div class="info-item"><span class="info-label">Location:</span> Vancouver, BC, Canada</div>
+                <div class="info-item"><span class="info-label">Email:</span> <a href="mailto:drzhang@vancouverneuro.ca">drzhang@vancouverneuro.ca</a></div>
+                <div class="info-item"><span class="info-label">Tel:</span> +1 604 555 9876</div>
+            </div>
+        </div>
+
+        <div id="noResults" style="display: none; text-align: center; padding: 4rem 2rem; background-color: var(--background-grey); border-radius: 2px; border: 1px solid var(--border-light);">
+            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0.5rem;">No practitioners found matching your search criteria.</p>
+            <p style="color: var(--text-muted);">Please try adjusting your search terms or filters.</p>
+        </div>
+
+        <div class="info-box" style="margin-top: 4rem;">
+            <h3>Join the IANA Practitioner Directory</h3>
+            <p>IANA members are listed in our international practitioner directory, making it easier for patients to find qualified neuro acupuncture specialists.</p>
+            <p style="margin-top: 1.5rem;">
+                <a href="membership.html" class="cta-button-primary">Apply for Membership</a>
+            </p>
+        </div>
+
+        <section class="content-section">
+            <h3>About This Directory</h3>
+            <p>All practitioners listed in the IANA directory meet the following criteria:</p>
+            <ul>
+                <li>Current professional registration with recognised acupuncture regulatory body</li>
+                <li>Documented specialist training in recognised neuro acupuncture modalities</li>
+                <li>Active IANA membership in good standing</li>
+                <li>Maintenance of professional indemnity insurance</li>
+                <li>Commitment to continuing professional development</li>
+                <li>Adherence to IANA code of ethics and professional conduct</li>
+            </ul>
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-muted);"><em>Disclaimer: IANA provides this directory as a professional resource. Patients are advised to verify practitioner credentials and discuss specific treatment requirements before commencing care. IANA does not provide clinical recommendations or guarantee treatment outcomes.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IANA</h3>
+                <p>International Association for Neuro Acupuncture</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; line-height: 1.6;">The International Association for Neuro Acupuncture (IANA) is a trading name of Neuro Acupuncture Group Ltd, a company registered in England under company number 15864460.</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; line-height: 1.6;">Registered office: 61 Bridge Street, Kington, HR5 3DJ, United Kingdom.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About IANA</a></li>
+                    <li><a href="directory.html">Find a Practitioner</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="accreditation.html">For Training Providers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Professional Standards</h3>
+                <ul>
+                    <li><a href="code-of-ethics.html">Code of Ethics</a></li>
+                    <li><a href="code-of-safe-practice.html">Code of Safe Practice</a></li>
+                </ul>
+                <h3 style="margin-top: 1.5rem;">Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 International Association for Neuro Acupuncture. All rights reserved.</p>
+        </div>
+    </footer>
+
+            <script>
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Dropdown menu handling for all devices
+        document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Close other dropdowns
+                document.querySelectorAll('.has-dropdown').forEach(function(dropdown) {
+                    if (dropdown !== this.parentElement) {
+                        dropdown.classList.remove('dropdown-active');
+                    }
+                }.bind(this));
+
+                // Toggle current dropdown
+                this.parentElement.classList.toggle('dropdown-active');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.has-dropdown')) {
+                document.querySelectorAll('.has-dropdown').forEach(function(dropdown) {
+                    dropdown.classList.remove('dropdown-active');
+                });
+            }
+        });
+
+        // Practitioner Directory Filtering and Search
+        const practitionerCards = document.querySelectorAll('#practitionerGrid .practitioner-card');
+        const searchInput = document.getElementById('searchInput');
+        const modalityFilter = document.getElementById('modalityFilter');
+        const resultsCount = document.getElementById('resultsCount');
+        const noResults = document.getElementById('noResults');
+        const practitionerGrid = document.getElementById('practitionerGrid');
+
+        function filterPractitioners() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedModality = modalityFilter.value;
+            let visibleCount = 0;
+
+            practitionerCards.forEach(function(card) {
+                const cardName = card.getAttribute('data-name').toLowerCase();
+                const cardLocation = card.getAttribute('data-location').toLowerCase();
+                const cardModalities = card.getAttribute('data-modalities');
+                const cardText = card.textContent.toLowerCase();
+
+                // Check search match
+                let searchMatch = searchTerm === '' ||
+                                 cardName.includes(searchTerm) ||
+                                 cardLocation.includes(searchTerm) ||
+                                 cardText.includes(searchTerm);
+
+                // Check modality match
+                let modalityMatch = selectedModality === 'all' || cardModalities.includes(selectedModality);
+
+                if (searchMatch && modalityMatch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update results count
+            if (visibleCount > 0) {
+                resultsCount.textContent = 'Showing ' + visibleCount + ' practitioner' + (visibleCount !== 1 ? 's' : '');
+                noResults.style.display = 'none';
+                practitionerGrid.style.display = 'grid';
+            } else {
+                resultsCount.textContent = '';
+                noResults.style.display = 'block';
+                practitionerGrid.style.display = 'none';
+            }
+        }
+
+        // Add event listeners
+        searchInput.addEventListener('input', filterPractitioners);
+        modalityFilter.addEventListener('change', filterPractitioners);
+
+        // Initial filter
+        filterPractitioners();
+    </script>
+</body>
+</html>
