@@ -1304,7 +1304,7 @@ footer {
 }
 
 .check-list-large li {
-    padding-left: 2.5rem;
+    padding-left: 3rem;
     margin-bottom: 1.5rem;
     position: relative;
     color: var(--text-secondary);
