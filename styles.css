@@ -1082,6 +1082,8 @@ footer {
     padding-left: 1.75rem;
     position: relative;
     margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .check-list li::before {
@@ -1164,6 +1166,7 @@ footer {
     position: relative;
     margin-bottom: 0.75rem;
     color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .pending-list li::before {
