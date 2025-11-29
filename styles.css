@@ -1304,7 +1304,7 @@ footer {
 }
 
 .check-list-large li {
-    padding-left: 3rem;
+    padding-left: 3.5rem;
     margin-bottom: 1.5rem;
     position: relative;
     color: var(--text-secondary);
@@ -1314,7 +1314,7 @@ footer {
 .check-list-large li::before {
     content: "✓";
     position: absolute;
-    left: 0;
+    left: 0.5rem;
     color: var(--primary-blue);
     font-weight: 600;
     font-size: 1.2rem;
