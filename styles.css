@@ -1307,6 +1307,8 @@ footer {
     padding-left: 2rem;
     margin-bottom: 1.5rem;
     position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 .check-list-large li::before {
