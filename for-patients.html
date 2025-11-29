@@ -21,13 +21,20 @@
             <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">About</a>
+                    <ul class="dropdown">
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                        <li><a href="for-patients.html">For Patients</a></li>
+                        <li><a href="what-is-neuro-acupuncture.html">About Neuro Acupuncture</a></li>
+                    </ul>
+                </li>
                 <li class="has-dropdown">
                     <a href="membership.html">For Practitioners</a>
                     <ul class="dropdown">
                         <li><a href="membership.html">Join IANA</a></li>
                         <li><a href="membership.html#benefits">Membership Benefits</a></li>
-                        <li><a href="directory.html">Practitioner Directory</a> <span class="nav-badge">March 2026</span></li>
+                        <li><a href="directory.html">Practitioner Directory <span class="nav-badge">March 2026</span></a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">
@@ -83,10 +90,6 @@
                 <div class="card">
                     <h4>Neuropathy</h4>
                     <p>Supporting management of peripheral nerve pain and sensory disturbances.</p>
-                </div>
-                <div class="card">
-                    <h4>Tinnitus</h4>
-                    <p>Helping to reduce the perception and severity of tinnitus symptoms.</p>
                 </div>
             </div>
             <p style="margin-top: 2rem;"><a href="conditions/" style="color: var(--primary-blue); font-weight: 500;">View all conditions →</a></p>
